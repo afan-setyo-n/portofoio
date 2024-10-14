@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 strong {
+    color: #232e35;
+}
+
+p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: #656d72;
+}
+
+a {
+    text-decoration: none;
+}
+
+.min-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .min-container {
+        width: 90%;
+    }
+}
+
+/* Navigation and Logo */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: #232e35;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #232e35;
+}
+
+/* Title */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: #656d72;
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: #d9d9d9;
+    position: absolute;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* Layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* Burger Menu */
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all .3s;
+}
+
+.burger {
+    display: none;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+    z-index: 99;
+}
+
+/* Hero Section */
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-nama {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hiro-right img {
+    width: 90%;
+}
+
+.hiro-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* Services Section */
+#Servis {
+    background-color: #fbfbfb;
+    padding: 6rem 0;
+}
+
+.Servis .pre-title {
+    margin: 0 auto;
+}
+
+.Servis-titele {
+    text-align: center;
+}
+
+.Servis {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #ffff;
+    border-radius: 0.7rem;
+}
+
+.Servis h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.Servis-icon svg {
+    fill: #99699c;
+}
+
+/* Portfolio */
+#portofoio{
+    padding: 6rem 0;
+}
+
+.porotofoio {
+    border-radius: 0.7rem;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+}
+
+.porotofoio-cover {
+    height: 350px;
+}
+
+.porotofoio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.porotofoio-info {
+    padding: 2rem 1.5rem;
+}
+
+.porotofoio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.porotofoio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.porotofoio-title a svg:hover {
+    fill: #99699c;
+}
+
+.porotofoio-title a svg {
+    transition: .2s ease-in-out;
+}
+
+/* Education Section */
+#penididkan {
+    padding: 6rem 0;
+    background: #fbfbfb;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.pembelajaran {
+    display: flex;
+    gap: 2rem;
+}
+
+.pembelajaran .line {
+    padding: 0 .7rem;
+}
+
+.pembelajaran .line div {
+    width: 2px;
+    height: 100%;
+    background: #656d72;
+    position: relative;
+}
+
+/* Contact Section */
+#contak {
+    padding: 7rem 0;
+}
+
+.contak {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.contak-from div {
+    margin-bottom: 1.4rem;
+}
+
+.contak-from input, .contak-from textarea {
+    width: 80%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: #fbfbfb;
+    border: 1px solid #f1f1f1;
+    border-radius: 3px;
+    resize: none;
+}
+
+.btn-subit {
+    width: 15%;
+    padding: .75rem 1.3rem;
+    background-color: #99699c;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.contak-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.contak-item-icon svg {
+    fill: #99699c;
+}
+
+.contak-item-details h4 {
+    margin-bottom: 0.6rem;
+}
+
+/* Footer */
+footer {
+    padding: 3rem 0;
+    background: #ffffff;
+    text-align: center;
+}
+
